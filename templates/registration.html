@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Запис на заняття — KAdance</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700;800&family=Montserrat:wght@700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../static/css/registration.css" />
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+        <h2 class="form-title">Запис на заняття</h2>
+        <p class="form-desc">Заповніть форму та оберіть зручний час</p>
+
+        <div class="name-row">
+            <div class="field-group">
+                <label>Ім'я</label>
+                <input type="text" placeholder="Олена" />
+            </div>
+            <div class="field-group">
+                <label>Прізвище</label>
+                <input type="text" placeholder="Коваль" />
+            </div>
+        </div>
+
+        <div class="phone-row">
+            <div class="field-group">
+                <label>Телефон</label>
+                <input type="tel" placeholder="+380XXXXXXXXX" />
+            </div>
+        </div>
+
+        <h3 class="schedule-title">Оберіть заняття</h3>
+
+       
+        <div class="day-block">
+            <div class="day-label">Понеділок</div>
+            <div class="slots">
+                <div class="slot" data-id="1" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Пілатес<br><small>9:00 - 10:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="2" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Стретчинг<br><small>10:00 - 11:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="3" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Айро фітнес<br><small>11:00 - 12:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="4" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Контемпорарі 8-11 років<br><small>15:30 - 17:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="5" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Контемпорарі 12-16 років<br><small>17:00 - 18:30</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="6" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Пілатес<br><small>19:00 - 20:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="7" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Стретчинг<br><small>20:00 - 21:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-block">
+            <div class="day-label">Вівторок</div>
+            <div class="slots">
+                <div class="slot" data-id="8" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Пілатес+стретчинг<br><small>10:00 - 11:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="9" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Контемпорарі<br><small>11:00 - 12:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="10" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Флай стретчинг<br><small>12:00 - 13:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="11" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">ЛФК+акробатика 8-13 років<br><small>17:00 - 18:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="12" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Гімнастика+ритміка 3-5 років<br><small>18:00 - 19:00</small></span>
+                    <span class="trainer">Ольга</span>
+                </div>
+                <div class="slot" data-id="13" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Релакс стретчинг<br><small>19:00 - 20:00</small></span>
+                    <span class="trainer">Ольга</span>
+                </div>
+                <div class="slot" data-id="14" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Барре<br><small>20:00 - 21:00</small></span>
+                    <span class="trainer">Ольга</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-block">
+            <div class="day-label">Середа</div>
+            <div class="slots">
+                <div class="slot" data-id="15" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Пілатес<br><small>9:00 - 10:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="16" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Стретчинг<br><small>10:00 - 11:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="17" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Айро фітнес<br><small>11:00 - 12:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="18" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Контемпорарі 8-11 років<br><small>15:30 - 17:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="19" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Контемпорарі 12-16 років<br><small>17:00 - 18:30</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="20" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Пілатес<br><small>19:00 - 20:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="21" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Стретчинг<br><small>20:00 - 21:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="day-block">
+            <div class="day-label">Четвер</div>
+            <div class="slots">
+                <div class="slot" data-id="22" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Пілатес+стретчинг<br><small>10:00 - 11:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="23" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Контемпорарі<br><small>11:00 - 12:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="24" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Флай стретчинг<br><small>12:00 - 13:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="25" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">ЛФК+акробатика 8-13 років<br><small>16:30 - 17:30</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="26" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Флай акробатика 9-14 років<br><small>17:30 - 18:30</small></span>
+                    <span class="trainer">Марія</span>
+                </div>
+                <div class="slot" data-id="27" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Флай стретчинг<br><small>18:30 - 19:30</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="28" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Зумба<br><small>19:30 - 20:30</small></span>
+                    <span class="trainer">Марія</span>
+                </div>
+                <div class="slot" data-id="29" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Айро фітнес<br><small>20:30 - 21:30</small></span>
+                    <span class="trainer">Марія</span>
+                </div>
+            </div>
+        </div>
+
+      
+
+        <div class="day-block">
+            <div class="day-label">П'ятниця</div>
+            <div class="slots">
+                <div class="slot" data-id="30" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Пілатес<br><small>9:00 - 10:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="31" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">МФР стретчинг<br><small>10:00 - 11:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="32" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Контемпорарі 8-16 років<br><small>17:00 - 18:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+                <div class="slot" data-id="33" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Гімнастика+ритміка 3-5 років<br><small>18:00 - 19:00</small></span>
+                    <span class="trainer">Ольга</span>
+                </div>
+                <div class="slot" data-id="34" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Пілатес+стретчинг<br><small>19:00 - 20:00</small></span>
+                    <span class="trainer">Ксенія</span>
+                </div>
+            </div>
+        </div>
+
+      
+
+        <div class="day-block">
+            <div class="day-label">Субота</div>
+            <div class="slots">
+                <div class="slot" data-id="35" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Релакс стретчинг<br><small>19:00 - 20:00</small></span>
+                    <span class="trainer">Ольга</span>
+                </div>
+                <div class="slot" data-id="36" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Барре<br><small>20:00 - 21:00</small></span>
+                    <span class="trainer">Ольга</span>
+                </div>
+            </div>
+        </div>
+
+
+     
+
+        <div class="day-block">
+            <div class="day-label">Неділя</div>
+            <div class="slots">
+                <div class="slot" data-id="37" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Флай акробатика 9-14 років<br><small>17:30 - 18:30</small></span>
+                    <span class="trainer">Марія</span>
+                </div>
+                <div class="slot" data-id="38" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Зумба<br><small>18:30 - 19:30</small></span>
+                    <span class="trainer">Марія</span>
+                </div>
+                <div class="slot" data-id="39" onclick="toggleSlot(this)">
+                    <span class="dot"></span>
+                    <span class="slot-name">Айро фітнес<br><small>19:30 - 20:30</small></span>
+                    <span class="trainer">Марія</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="submit-btn" onclick="submitForm()">Записатися </button>
+    </div>
+
+    <script>
+        function toggleSlot(el) {
+            el.classList.toggle('selected');
+        }
+
+        function submitForm() {
+            const name = document.querySelector('.name-row .field-group:first-child input').value.trim();
+            const surname = document.querySelector('.name-row .field-group:last-child input').value.trim();
+            const phone = document.querySelector('.phone-row input').value.trim();
+
+            if (!name || !surname || !phone) {
+                if (!name) document.querySelector('.name-row .field-group:first-child input').classList.add('error');
+                if (!surname) document.querySelector('.name-row .field-group:last-child input').classList.add('error');
+                if (!phone) document.querySelector('.phone-row input').classList.add('error');
+                return;
+            }
+
+            const selectedSlots = document.querySelectorAll('.slot.selected');
+            if (selectedSlots.length === 0) {
+                alert('Оберіть хоча б одне заняття');
+                return;
+            }
+
+            const classIds = Array.from(selectedSlots).map(s => parseInt(s.dataset.id));
+
+            fetch('https://localhost:7098/api/registration', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, surname, phone, classIds })
+            })
+                .then(res => res.json())
+                .then(() => alert('Дякуємо! Ми зв\'яжемося з вами найближчим часом.'))
+                .catch(() => alert('Помилка з\'єднання з сервером'));
+        }
+
+        document.querySelectorAll('.field-group input').forEach(input => {
+            input.addEventListener('input', function () {
+                this.classList.remove('error');
+            });
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
