@@ -1,4 +1,4 @@
-﻿namespace KAdanceAPI.models
+namespace KAdanceAPI.models
 {
     public class Registration
     {
